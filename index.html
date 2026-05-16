@@ -275,6 +275,12 @@
                     <i data-lucide="map-pin" class="w-5 h-5"></i>
                     <span>Running Tracker</span>
                 </button>
+                <button
+                    class="nav-btn w-full flex items-center gap-3 p-3 rounded-lg hover:bg-orange-50 hover:text-orange-700 transition text-left text-gray-600"
+                    data-page="videos">
+                    <i data-lucide="video" class="w-5 h-5"></i>
+                    <span>Workout Videos</span>
+                </button>
             </nav>
 
             <div class="mt-8 pt-8 border-t border-gray-200">
@@ -579,6 +585,21 @@
                 </div>
             </div>
 
+            <!-- WORKOUT VIDEOS SECTION -->
+            <div id="videosSection" class="section hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Workout Videos</h2>
+                    <div class="flex gap-2 flex-wrap mb-4">
+                        <button onclick="filterVideos('all')" id="vidFilterAll" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-lg font-medium">All</button>
+                        <button onclick="filterVideos('HIIT')" id="vidFilterHIIT" class="px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-lg">HIIT</button>
+                        <button onclick="filterVideos('Strength')" id="vidFilterStrength" class="px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-lg">Strength</button>
+                        <button onclick="filterVideos('Cardio')" id="vidFilterCardio" class="px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-lg">Cardio</button>
+                        <button onclick="filterVideos('Flexibility')" id="vidFilterFlexibility" class="px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-lg">Flexibility</button>
+                    </div>
+                </div>
+                <div id="videosList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            </div>
+
             <!-- RUNNING TRACKER SECTION -->
             <div id="runningSection" class="section hidden">
                 <div class="glass p-6 rounded-2xl">
@@ -765,6 +786,10 @@
         let runStartTime = null;
         let runTimer = null;
         let runTotalDistance = 0;
+        
+        // Video variables
+        let workoutVideos = [];
+        let currentVideoFilter = 'all';
 
         // --- UI LOGIC ---
         const sidebar = document.getElementById('sidebar');
@@ -800,6 +825,7 @@
                 if (page === 'tools') loadResources();
                 if (page === 'routines') loadQuizzes();
                 if (page === 'running') initRunMap();
+                if (page === 'videos') loadVideos();
             });
         });
 
@@ -1359,6 +1385,105 @@
                       Math.sin(dLon/2) * Math.sin(dLon/2);
             const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
             return R * c;
+        }
+
+        // --- WORKOUT VIDEOS ---
+        async function loadVideos() {
+            if (workoutVideos.length === 0) {
+                try {
+                    const response = await fetch('./vid.json');
+                    workoutVideos = await response.json();
+                } catch (error) {
+                    console.error('Error loading videos:', error);
+                    document.getElementById('videosList').innerHTML = '<p class="text-red-500 col-span-full text-center">Error loading videos</p>';
+                    return;
+                }
+            }
+            displayVideos();
+        }
+        
+        function displayVideos() {
+            const container = document.getElementById('videosList');
+            container.innerHTML = '';
+            
+            const filtered = currentVideoFilter === 'all' 
+                ? workoutVideos 
+                : workoutVideos.filter(v => v.category === currentVideoFilter);
+            
+            if (filtered.length === 0) {
+                container.innerHTML = '<p class="text-gray-400 col-span-full text-center py-10">No videos found</p>';
+                return;
+            }
+            
+            filtered.forEach(video => {
+                const div = document.createElement('div');
+                div.className = 'glass rounded-xl overflow-hidden hover:shadow-lg transition group';
+                
+                const difficultyColors = {
+                    'Beginner': 'bg-green-100 text-green-700',
+                    'Intermediate': 'bg-yellow-100 text-yellow-700',
+                    'Advanced': 'bg-red-100 text-red-700'
+                };
+                
+                div.innerHTML = `
+                    <div class="relative cursor-pointer" onclick="playVideo('${video.youtubeId}', '${video.title}')">
+                        <img src="${video.thumbnail}" alt="${video.title}" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition flex items-center justify-center">
+                            <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition transform scale-75 group-hover:scale-100">
+                                <i data-lucide="play" class="w-8 h-8 text-white ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded">${video.duration}</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex gap-2 mb-2">
+                            <span class="text-xs font-bold px-2 py-1 rounded ${difficultyColors[video.difficulty]}">${video.difficulty}</span>
+                            <span class="text-xs font-bold px-2 py-1 rounded bg-orange-100 text-orange-700">${video.category}</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">${video.title}</h3>
+                        <p class="text-sm text-gray-500 line-clamp-2">${video.description}</p>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+            lucide.createIcons();
+        }
+        
+        function filterVideos(category) {
+            currentVideoFilter = category;
+            ['all', 'HIIT', 'Strength', 'Cardio', 'Flexibility'].forEach(cat => {
+                const btn = document.getElementById(`vidFilter${cat.charAt(0).toUpperCase() + cat.slice(1)}`);
+                if (btn) {
+                    btn.className = cat === category 
+                        ? 'px-4 py-2 bg-orange-100 text-orange-700 rounded-lg font-medium'
+                        : 'px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-lg';
+                }
+            });
+            displayVideos();
+        }
+        
+        function playVideo(youtubeId, title) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-75 z-[300] flex items-center justify-center p-4';
+            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+            
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl overflow-hidden max-w-4xl w-full">
+                    <div class="flex justify-between items-center p-4 border-b">
+                        <h3 class="font-bold text-gray-800">${title}</h3>
+                        <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-800">
+                            <i data-lucide="x" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                    <div class="aspect-video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${youtubeId}?autoplay=1" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            lucide.createIcons();
         }
 
         checkSession();
