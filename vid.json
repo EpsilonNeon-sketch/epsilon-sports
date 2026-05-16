@@ -118,5 +118,215 @@
     "youtubeId": "O4R7yW1ZyGY",
     "thumbnail": "https://img.youtube.com/vi/O4R7yW1ZyGY/maxresdefault.jpg",
     "description": "Pilates-based workout focusing on core strength and body control."
+  },
+  {
+    "id": 13,
+    "title": "Beginner's Guide to Running",
+    "category": "Cardio",
+    "duration": "35:00",
+    "difficulty": "Beginner",
+    "youtubeId": "dQw4w9WgXcQ",
+    "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "description": "Complete beginner's guide to running, including tips, form, and training plans."
+  },
+  {
+    "id": 14,
+    "title": "Quick Morning Yoga Flow",
+    "category": "Flexibility",
+    "duration": "12:00",
+    "difficulty": "Beginner",
+    "youtubeId": "yoga1234abcd",
+    "thumbnail": "https://img.youtube.com/vi/yoga1234abcd/maxresdefault.jpg",
+    "description": "Start your day with this energizing 12-minute yoga flow for flexibility and focus."
+  },
+  {
+    "id": 15,
+    "title": "HIIT Express - 10 Minute Burn",
+    "category": "HIIT",
+    "duration": "10:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "hiit5678efgh",
+    "thumbnail": "https://img.youtube.com/vi/hiit5678efgh/maxresdefault.jpg",
+    "description": "A fast-paced HIIT session to boost your metabolism and burn calories quickly."
+  },
+  {
+    "id": 16,
+    "title": "Strength Circuit for Beginners",
+    "category": "Strength",
+    "duration": "18:00",
+    "difficulty": "Beginner",
+    "youtubeId": "strcircuit910ij",
+    "thumbnail": "https://img.youtube.com/vi/strcircuit910ij/maxresdefault.jpg",
+    "description": "Simple strength circuit using bodyweight exercises for all levels."
+  },
+  {
+    "id": 17,
+    "title": "Cardio Kickboxing Routine",
+    "category": "Cardio",
+    "duration": "22:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "cardiokb1122kl",
+    "thumbnail": "https://img.youtube.com/vi/cardiokb1122kl/maxresdefault.jpg",
+    "description": "Fun and energetic cardio kickboxing workout to improve endurance and coordination."
+  },
+  {
+    "id": 18,
+    "title": "Pilates for Posture",
+    "category": "Flexibility",
+    "duration": "16:00",
+    "difficulty": "Beginner",
+    "youtubeId": "pilates3344mn",
+    "thumbnail": "https://img.youtube.com/vi/pilates3344mn/maxresdefault.jpg",
+    "description": "Improve your posture and core strength with this beginner Pilates session."
+  },
+  {
+    "id": 19,
+    "title": "Upper Body Dumbbell Workout",
+    "category": "Strength",
+    "duration": "20:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "upperdb5566op",
+    "thumbnail": "https://img.youtube.com/vi/upperdb5566op/maxresdefault.jpg",
+    "description": "Sculpt your arms, shoulders, and chest with this dumbbell-focused routine."
+  },
+  {
+    "id": 20,
+    "title": "Low Impact Cardio for Seniors",
+    "category": "Cardio",
+    "duration": "15:00",
+    "difficulty": "Beginner",
+    "youtubeId": "lowimpact7788qr",
+    "thumbnail": "https://img.youtube.com/vi/lowimpact7788qr/maxresdefault.jpg",
+    "description": "Gentle, joint-friendly cardio workout designed for seniors and beginners."
+  },
+  {
+    "id": 21,
+    "title": "Advanced Plyometrics Challenge",
+    "category": "HIIT",
+    "duration": "18:00",
+    "difficulty": "Advanced",
+    "youtubeId": "plyo9900st",
+    "thumbnail": "https://img.youtube.com/vi/plyo9900st/maxresdefault.jpg",
+    "description": "Push your limits with this explosive plyometric HIIT workout."
+  },
+  {
+    "id": 22,
+    "title": "Full Body Mobility Routine",
+    "category": "Flexibility",
+    "duration": "14:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "mobility2233uv",
+    "thumbnail": "https://img.youtube.com/vi/mobility2233uv/maxresdefault.jpg",
+    "description": "Enhance your range of motion and prevent injury with this mobility session."
+  },
+  {
+    "id": 23,
+    "title": "Bodyweight Bootcamp",
+    "category": "Strength",
+    "duration": "21:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "bootcamp4455wx",
+    "thumbnail": "https://img.youtube.com/vi/bootcamp4455wx/maxresdefault.jpg",
+    "description": "Challenging bootcamp workout using only your bodyweight."
+  },
+  {
+    "id": 24,
+    "title": "Stretch & Relax - Evening Routine",
+    "category": "Flexibility",
+    "duration": "17:00",
+    "difficulty": "Beginner",
+    "youtubeId": "stretchrelax6677yz",
+    "thumbnail": "https://img.youtube.com/vi/stretchrelax6677yz/maxresdefault.jpg",
+    "description": "Wind down and recover with this calming evening stretch routine."
+  },
+  {
+    "id": 25,
+    "title": "Boxing Cardio Blast",
+    "category": "Cardio",
+    "duration": "19:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "boxing8899ab",
+    "thumbnail": "https://img.youtube.com/vi/boxing8899ab/maxresdefault.jpg",
+    "description": "High-intensity boxing-inspired cardio workout for all levels."
+  },
+  {
+    "id": 26,
+    "title": "Glute Activation Workout",
+    "category": "Strength",
+    "duration": "13:00",
+    "difficulty": "Beginner",
+    "youtubeId": "gluteact1010cd",
+    "thumbnail": "https://img.youtube.com/vi/gluteact1010cd/maxresdefault.jpg",
+    "description": "Activate and strengthen your glutes with this focused routine."
+  },
+  {
+    "id": 27,
+    "title": "Power Yoga for Athletes",
+    "category": "Flexibility",
+    "duration": "20:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "poweryoga1212ef",
+    "thumbnail": "https://img.youtube.com/vi/poweryoga1212ef/maxresdefault.jpg",
+    "description": "Dynamic power yoga flow to build strength and flexibility for athletes."
+  },
+  {
+    "id": 28,
+    "title": "Tabata Cardio Challenge",
+    "category": "HIIT",
+    "duration": "08:00",
+    "difficulty": "Advanced",
+    "youtubeId": "tabata1313gh",
+    "thumbnail": "https://img.youtube.com/vi/tabata1313gh/maxresdefault.jpg",
+    "description": "Intense Tabata intervals for a quick and effective cardio burn."
+  },
+  {
+    "id": 29,
+    "title": "Prenatal Yoga for Moms-to-Be",
+    "category": "Flexibility",
+    "duration": "24:00",
+    "difficulty": "Beginner",
+    "youtubeId": "prenatal1414ij",
+    "thumbnail": "https://img.youtube.com/vi/prenatal1414ij/maxresdefault.jpg",
+    "description": "Gentle prenatal yoga routine for expecting mothers."
+  },
+  {
+    "id": 30,
+    "title": "Resistance Band Strength",
+    "category": "Strength",
+    "duration": "18:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "resband1515kl",
+    "thumbnail": "https://img.youtube.com/vi/resband1515kl/maxresdefault.jpg",
+    "description": "Full body strength workout using resistance bands."
+  },
+  {
+    "id": 31,
+    "title": "Beginner Step Aerobics",
+    "category": "Cardio",
+    "duration": "20:00",
+    "difficulty": "Beginner",
+    "youtubeId": "step1616mn",
+    "thumbnail": "https://img.youtube.com/vi/step1616mn/maxresdefault.jpg",
+    "description": "Fun and easy step aerobics routine for beginners."
+  },
+  {
+    "id": 32,
+    "title": "Core Stability Ball Workout",
+    "category": "Strength",
+    "duration": "15:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "coreball1717op",
+    "thumbnail": "https://img.youtube.com/vi/coreball1717op/maxresdefault.jpg",
+    "description": "Strengthen your core with this stability ball workout."
+  },
+  {
+    "id": 33,
+    "title": "Dynamic Warm-Up Routine",
+    "category": "Flexibility",
+    "duration": "09:00",
+    "difficulty": "Beginner",
+    "youtubeId": "warmup1818qr",
+    "thumbnail": "https://img.youtube.com/vi/warmup1818qr/maxresdefault.jpg",
+    "description": "Prepare your body for exercise with this dynamic warm-up."
   }
 ]
