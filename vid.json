@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Full Body HIIT Workout - 20 Minutes",
+    "category": "HIIT",
+    "duration": "20:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "ml6cT4AZdqI",
+    "thumbnail": "https://img.youtube.com/vi/ml6cT4AZdqI/maxresdefault.jpg",
+    "description": "Intense 20-minute full body HIIT workout to burn calories and build strength."
+  },
+  {
+    "id": 2,
+    "title": "Beginner Strength Training",
+    "category": "Strength",
+    "duration": "15:00",
+    "difficulty": "Beginner",
+    "youtubeId": "UBMk30rjy0o",
+    "thumbnail": "https://img.youtube.com/vi/UBMk30rjy0o/maxresdefault.jpg",
+    "description": "Perfect strength training routine for beginners with no equipment needed."
+  },
+  {
+    "id": 3,
+    "title": "30 Min Cardio Workout - No Equipment",
+    "category": "Cardio",
+    "duration": "30:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "gC_L9qAHVJ8",
+    "thumbnail": "https://img.youtube.com/vi/gC_L9qAHVJ8/maxresdefault.jpg",
+    "description": "High-energy cardio workout that requires no equipment, perfect for home training."
+  },
+  {
+    "id": 4,
+    "title": "Yoga for Flexibility - Morning Stretch",
+    "category": "Flexibility",
+    "duration": "25:00",
+    "difficulty": "Beginner",
+    "youtubeId": "v7AYKMP6rOE",
+    "thumbnail": "https://img.youtube.com/vi/v7AYKMP6rOE/maxresdefault.jpg",
+    "description": "Gentle morning yoga routine to improve flexibility and start your day right."
+  },
+  {
+    "id": 5,
+    "title": "Advanced HIIT - Fat Burning Workout",
+    "category": "HIIT",
+    "duration": "25:00",
+    "difficulty": "Advanced",
+    "youtubeId": "M0uO8X3_tEA",
+    "thumbnail": "https://img.youtube.com/vi/M0uO8X3_tEA/maxresdefault.jpg",
+    "description": "Challenging HIIT workout designed for maximum fat burning and endurance."
+  },
+  {
+    "id": 6,
+    "title": "Upper Body Strength Training",
+    "category": "Strength",
+    "duration": "20:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "cPXGPSzczVg",
+    "thumbnail": "https://img.youtube.com/vi/cPXGPSzczVg/maxresdefault.jpg",
+    "description": "Build upper body strength with this targeted workout for arms, chest, and back."
+  },
+  {
+    "id": 7,
+    "title": "Core & Abs Workout - 10 Minutes",
+    "category": "Strength",
+    "duration": "10:00",
+    "difficulty": "Beginner",
+    "youtubeId": "DHD1-2P94DI",
+    "thumbnail": "https://img.youtube.com/vi/DHD1-2P94DI/maxresdefault.jpg",
+    "description": "Quick and effective core workout to strengthen your abs and improve stability."
+  },
+  {
+    "id": 8,
+    "title": "Dance Cardio Workout - Fun & Energetic",
+    "category": "Cardio",
+    "duration": "30:00",
+    "difficulty": "Beginner",
+    "youtubeId": "l_MyUkKGgSw",
+    "thumbnail": "https://img.youtube.com/vi/l_MyUkKGgSw/maxresdefault.jpg",
+    "description": "Fun dance cardio workout that makes exercise enjoyable and burns calories."
+  },
+  {
+    "id": 9,
+    "title": "Full Body Stretch - Post Workout",
+    "category": "Flexibility",
+    "duration": "15:00",
+    "difficulty": "Beginner",
+    "youtubeId": "g_tea8ZNk5A",
+    "thumbnail": "https://img.youtube.com/vi/g_tea8ZNk5A/maxresdefault.jpg",
+    "description": "Essential post-workout stretching routine to improve recovery and flexibility."
+  },
+  {
+    "id": 10,
+    "title": "Leg Day - Lower Body Strength",
+    "category": "Strength",
+    "duration": "25:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "vc1E5CfRfos",
+    "thumbnail": "https://img.youtube.com/vi/vc1E5CfRfos/maxresdefault.jpg",
+    "description": "Comprehensive leg workout targeting quads, hamstrings, glutes, and calves."
+  },
+  {
+    "id": 11,
+    "title": "Tabata HIIT - 4 Minute Workout",
+    "category": "HIIT",
+    "duration": "04:00",
+    "difficulty": "Advanced",
+    "youtubeId": "20xgRUMWfnI",
+    "thumbnail": "https://img.youtube.com/vi/20xgRUMWfnI/maxresdefault.jpg",
+    "description": "Intense 4-minute Tabata workout for maximum calorie burn in minimal time."
+  },
+  {
+    "id": 12,
+    "title": "Pilates Core Workout",
+    "category": "Flexibility",
+    "duration": "20:00",
+    "difficulty": "Intermediate",
+    "youtubeId": "O4R7yW1ZyGY",
+    "thumbnail": "https://img.youtube.com/vi/O4R7yW1ZyGY/maxresdefault.jpg",
+    "description": "Pilates-based workout focusing on core strength and body control."
+  }
+]
