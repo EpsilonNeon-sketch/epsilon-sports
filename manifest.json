@@ -1,1 +1,21 @@
-{"name":"Epsilon Sports","short_name":"Epsilon","start_url":"site.html","display":"standalone","background_color":"#f8fafc","theme_color":"#f97316","description":"Track your fitness, log workouts, and crush your goals with Epsilon Sports.","icons":[{"src":"https://cdn-icons-png.flaticon.com/512/3063/3063822.png","sizes":"192x192","type":"image/png"},{"src":"https://cdn-icons-png.flaticon.com/512/3063/3063822.png","sizes":"512x512","type":"image/png"}]}
+{
+  "name": "Epsilon Sports",
+  "short_name": "Esports",
+  "start_url": "site.html",
+  "display": "standalone",
+  "background_color": "#f97316",
+  "theme_color": "#f97316",
+  "description": "Track your fitness, log workouts, and crush your goals with Epsilon Sports.",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
