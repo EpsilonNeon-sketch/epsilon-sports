@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epsilon Sports | Your Ultimate Fitness Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .orange-gradient {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+    <nav class="px-6 py-4 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="flex items-center gap-2">
+            <i data-lucide="zap" class="text-orange-500 w-8 h-8"></i>
+            <span class="text-2xl font-extrabold text-slate-800 tracking-tight">EPSILON<span
+                    class="text-orange-500">SPORTS</span></span>
+        </div>
+        <button onclick="vs();" href="./site.html"
+            class="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg shadow-orange-200">Launch
+            App</button>
+    </nav>
+
+    <main>
+        <section class="px-6 py-20 text-center max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6">Elevate Your <span
+                    class="text-orange-500">Training</span> Beyond Limits.</h1>
+            <p class="text-lg text-slate-600 mb-10 leading-relaxed">The all-in-one performance tracking suite. Monitor
+                workouts, create custom routines, calculate health metrics, and track your runs in real-time.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="./site.html"
+                    class="orange-gradient text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                    <i data-lucide="play-circle" class="w-6 h-6"></i> Start Your Journey
+                </a>
+                <button href="#features" onclick="vs();"
+                    class="bg-white text-slate-800 border-2 border-slate-200 px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                    Explore Features
+                </button>
+            </div>
+        </section>
+
+        <section id="features" class="px-6 py-20 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 hover:border-orange-200 transition">
+                        <div
+                            class="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="dumbbell" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Precision Tracking</h3>
+                        <p class="text-slate-600">Log exercises with duration and calorie tracking. Visualize your
+                            progress with interactive distribution charts.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 hover:border-orange-200 transition">
+                        <div
+                            class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="map-pin" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Live Running GPS</h3>
+                        <p class="text-slate-600">Real-time mapping, distance calculation, and pace monitoring. Watch
+                            your path unfold as you hit the pavement.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 hover:border-orange-200 transition">
+                        <div
+                            class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="timer" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Performance Tools</h3>
+                        <p class="text-slate-600">Built-in Pomodoro timer for focus, BMI calculators, and 1RM estimators
+                            to optimize your strength gains.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-20 bg-slate-900 text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">Ready to break your records?</h2>
+                <p class="text-slate-400 text-lg mb-10">Join thousands of athletes who use Epsilon Sports to manage
+                    their fitness lifestyle with ease and data-driven insights.</p>
+                <button href="./site.html" onclick="vs();"
+                    class="inline-block bg-orange-500 text-white px-12 py-4 rounded-full font-bold text-xl hover:bg-orange-600 transition shadow-2xl shadow-orange-500/20">Enter
+                    Training Zone</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center text-slate-500 text-sm border-t border-slate-100">
+        <p>&copy; 2026 Epsilon Sports. Built for the modern athlete.</p>
+    </footer>
+
+    <script>
+        // 1. Immediate Redirect Check
+        if (localStorage.getItem('epsilon_entered_sport') === 'true') {
+            window.location.href = 'site.html';
+        }
+
+        // 2. Set localStorage and navigate on button click
+        function openSiteAndRemember() {
+            localStorage.setItem('epsilon_entered_sport', 'true');
+            window.location.href = 'site.html';
+        }
+
+        // Attach to all relevant buttons/links
+        window.addEventListener('DOMContentLoaded', function () {
+            // Main hero button
+            var heroBtn = document.querySelector('a[href="./site.html"]');
+            if (heroBtn) {
+                heroBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    openSiteAndRemember();
+                });
+            }
+            // Nav button
+            var navBtn = document.querySelector('nav button');
+            if (navBtn) {
+                navBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    openSiteAndRemember();
+                });
+            }
+            // CTA button at bottom
+            var ctaBtn = document.querySelector('section.bg-slate-900 button');
+            if (ctaBtn) {
+                ctaBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    openSiteAndRemember();
+                });
+            }
+        });
+
+        // 3. Loading Overlay Logic (if you add a loader)
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('epsilon-loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.remove(), 500);
+                }, 800);
+            }
+        });
+
+        // 4. Lucide icons
+        window.addEventListener('DOMContentLoaded', function () {
+            if (window.lucide && lucide.createIcons) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
